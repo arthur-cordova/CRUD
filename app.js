@@ -6,5 +6,5 @@ app.listen(port, (error) => {
     if (error) {
         console.log("Erro");
     }
-    console.log("Sistema Rodando");
+    console.log("Rodando");
 })
