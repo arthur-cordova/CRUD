@@ -10,4 +10,4 @@ app.listen(port, (error) => {
         console.log("Erro");
     }
     console.log("Sistema Rodando");
-})
+});

@@ -10,12 +10,12 @@ router.post("/cliente", (req, res) => {
     res.send("Cliente cadastrado com sucesso");
 });
 
-router.put("/clientes/:id", (req, res) => {
+router.put("/cliente/:id", (req, res) => {
     const {id} = req.params;
     res.send("Cliente atualizado com sucesso");
 });
 
-router.delete("/clientes/:id", (req, res) => {
+router.delete("/cliente/:id", (req, res) => {
     const {id} = req.params;
     res.send("Cliente deletado com sucesso");
 });
