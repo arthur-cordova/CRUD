@@ -18,8 +18,13 @@ class Tables {
         this.connect.query(sql, (error) => {
             if(error) {
                 console.log("Erro ao criar a tabela clientes");
+                console.log(error.message);
+                return;
             }
-            console.log("Tabela criada");
+            console.log("Tabela criada com sucesso");
         });
+        
     }
 }
+
+module.exports = new Tables();
