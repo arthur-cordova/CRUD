@@ -1,9 +1,11 @@
 const Router = require("express").Router;
 const router = Router();
+const clienteController = require("../controller/clienteController");
 
 // CRUD
 router.get("/clientes", (req, res) => {
-    res.send("Clientes consultados com sucesso");
+    const respcontroller = clienteController.buscar();
+    res.send(respcontroller);
 });
 
 router.post("/cliente", (req, res) => {
