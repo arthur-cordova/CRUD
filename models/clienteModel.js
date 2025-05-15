@@ -32,10 +32,10 @@ class clienteModel {
     }
 
     alterar(clienteAtualizado, id) {
-        const sql = "UPDATE clientes SET ? WHERE id = ?";
-        console.log(`Novos dados do cliente de id ${id} a serem inseridos: ${clienteAtualizado}`);
+        const sql = "UPDATE clientes SET ? WHERE id=?";
+        console.log("Novos dados do cliente de id ",id," a serem inseridos: ", clienteAtualizado);
         return new Promise ((resolve, reject) => {
-            connection.query(sql, {clienteAtualizado, id}, (error, resposta) => {
+            connection.query(sql, [clienteAtualizado, id], (error, resposta) => {
                 if (error) {
                     console.log("Erro ao atualizar cliente");
                     console.log(error.message);

@@ -5,15 +5,15 @@ class clienteController {
         return clienteModel.listar();
     }
 
-    criar() {
+    criar(novoCliente) {
         return clienteModel.criar(novoCliente);
     }
 
-    alterar() {
+    alterar(clienteAtualizado, id) {
         return clienteModel.alterar(clienteAtualizado, id);
     }
 
-    apagar() {
+    apagar(id) {
         return clienteModel.apagar(id);
     }
 }

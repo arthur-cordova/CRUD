@@ -18,15 +18,16 @@ router.post("/cliente", (req, res) => {
 
 router.put("/cliente/:id", (req, res) => {
     const {id} = req.params;
+    const clienteAtualizado = req.body;
     const respcontroller = clienteController.alterar(clienteAtualizado, id);
-    respcontroller.then(clientes => res.status(200).json(clientes))
+    respcontroller.then(resultAtualizado => res.status(200).json(resultAtualizado))
                 .catch(error => res.status(400).json(error.message));
 });
 
 router.delete("/cliente/:id", (req, res) => {
     const {id} = req.params;
     const respcontroller = clienteController.apagar(id);
-    respcontroller.then(clientes => res.status(200).json(clientes))
+    respcontroller.then(clienteDeletado => res.status(200).json(clienteDeletado))
                 .catch(error => res.status(400).json(error.message));
 });
 

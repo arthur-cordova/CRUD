@@ -12,7 +12,7 @@ class Tables {
             email VARCHAR(100) NOT NULL UNIQUE,
             telefone VARCHAR(15),
             data_de_nascimento DATE,
-            data_cadastro DATE
+            data_cadastro DATE DEFAULT NOW() 
             );
         `;
         this.connect.query(sql, (error) => {
